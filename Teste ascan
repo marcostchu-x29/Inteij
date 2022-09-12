@@ -1,0 +1,31 @@
+import org.checkerframework.checker.units.qual.C;
+import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Ascan {
+    @Test
+
+    public void desafioascan(){
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\AvelarMa\\IdeaProjects\\Ascan\\Ascanteste\\src\\driver\\chromedriver.exe");
+        WebDriver navegar = new ChromeDriver();
+
+        navegar.get("https://www.way2automation.com/angularjs-protractor/banking/#/login");
+
+
+      navegar.findElement(By.xpath("/html/body/div[3]/div/div[2]/div/div[1]/div[2]/button")).click();
+      navegar.findElement(By.xpath("/html/body/div[3]/div/div[2]/div/div[1]/button[1]")).click();
+
+      navegar.findElement(By.xpath("/html/body/div[3]/div/div[2]/div/div[2]/div/div/form/div[1]/input")).sendKeys("marcos");
+      navegar.findElement(By.xpath("/html/body/div[3]/div/div[2]/div/div[2]/div/div/form/div[2]/input")).sendKeys("joca");
+      navegar.findElement(By.xpath("/html/body/div[3]/div/div[2]/div/div[2]/div/div/form/div[3]/input")).sendKeys("6032000");
+
+      navegar.findElement(By.xpath("/html/body/div[3]/div/div[2]/div/div[2]/div/div/form/button")).sendKeys("Add Customer", Keys.ENTER);
+
+
+
+    }
+}
